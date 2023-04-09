@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { Link } from 'react-router-dom';
-import scissors from "../../images/scissors-24.ico";
+import scissors from "../../images/barber-scissors-24.png";
 
 const Navbar = () => {
     // const {user,logOut}=useContext(AuthContext);
