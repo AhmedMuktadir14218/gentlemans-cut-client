@@ -22,7 +22,7 @@ const Navbar = () => {
         <li><Link to="/galary">Galary</Link></li>
         <li><Link to="/blog">Blog</Link></li>
         {/* <li><Link to="/contactus">Contact Us</Link></li> */}
-        <li><button className='btn btn-accent'><Link to="/contactus">LogIn</Link></button></li>
+        <li><button className='btn btn-primary'><Link to="/login">LogIn</Link></button></li>
         {/* {user?.uid ?1
             <>
                 <li><Link to="/dashboard">Dashboard</Link></li>

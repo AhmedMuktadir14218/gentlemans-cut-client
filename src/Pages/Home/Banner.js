@@ -9,7 +9,7 @@ const Banner = () => {
     <div className="max-w-md">
       <h1 className="mb-5 text-5xl font-bold">We Will Keep You An Impacable Look</h1>
       <p className="mb-5"></p>
-      <button className="btn btn-accent">Book Now</button>
+      <button className="btn btn-primary">Book Now</button>
     </div>
   </div>
 </div>
