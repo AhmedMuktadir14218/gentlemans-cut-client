@@ -1,14 +1,14 @@
 import React from 'react';
 import Banner from './Banner';
 
-import homebgimg from "../../images/mostafa-meraji-5npGPG0sSVk-unsplash.jpg";
+// import homebgimg from "../../images/mostafa-meraji-5npGPG0sSVk-unsplash.jpg";
 // import homebgimg2 from "../../images/mostafa-meraji-v7DgWdQL_eE-unsplash.jpg";
 // import homebgimg3 from "../../images/allef-vinicius-IvQeAVeJULw-unsplash.jpg";
 
 const Home = () => {
     return (
         <div>
-            <div className="overflow-y-hidden">
+            {/* <div className="overflow-y-hidden">
       <div className="relative flex justify-center items-center md:justify-start ">
         <img className="hidden lg:block  w-full" src={homebgimg} alt="randeer" />
         <img className="md:block lg:hidden hidden  w-full " src="https://tuk-cdn.s3.amazonaws.com/can-uploader/banner_11_ipad.png" alt="randeer" />
@@ -24,7 +24,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-    </div>
+    </div> */}
             <Banner></Banner>
         </div>
     );
