@@ -45,8 +45,16 @@ const Navbar = () => {
     const SizeNav={
         "margin-left":"50px",
         "margin-right":"70px",
-        "color":"white"
+        "color":"white",
+        // "font-family": "'Roboto Slab', sans-serif",
+        "font-family": "'Roboto Condensed', sans-serif"
+        // font-family: 'Roboto Condensed Light', sans-serif;
+
     };
+
+    const forText={
+        "font-family": "'Bebas Neue', sans-serif"
+    }
 
     return (
         <div  className=" navbar    bg-neutral text-neutral-content  flex justify-between  ">
@@ -60,8 +68,8 @@ const Navbar = () => {
                     <ul tabIndex={1} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
                         {menuItems}
                     </ul>
-                </div>
-                <Link to="/" className="btn btn-ghost normal-case text-xl"><span><img src={scissors} alt="" /></span> Gentleman's Cut</Link>
+                </div  >
+                <Link style={forText} to="/" className="btn btn-ghost normal-case text-xl"><span><img src={scissors} alt="" /></span> Gentleman's Cut</Link>
             </div>
             <div style={SizeNav} className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal p-0">

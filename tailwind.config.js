@@ -5,11 +5,14 @@ module.exports = {
     themes: [
       {
         doctortheme:{
-          primary: '#ff0000',
-          secondary: '#19D3AE',
+          "primary": "#ff0000",
+          "secondary": "#202020",
           // accent: "#ff0000",
-          neutral: "#3D4451",
+          "neutral": "#2c2c2c",
+          
           "base-100": "#FFFFFF",
+          "info": "#d4d4d4",
+          // "base-150":"#9e9e9e"
         }
       }
     ]
