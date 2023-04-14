@@ -12,3 +12,11 @@
     
                                                 
 }
+.btn{
+    border-radius: 0;
+    padding: 5px 20px;
+}
+/* .bannertext {
+    justify-content: start !important;
+
+} */

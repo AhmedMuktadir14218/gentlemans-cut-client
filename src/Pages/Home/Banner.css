@@ -1,0 +1,13 @@
+.hero-content {
+    z-index: 0;
+    display: flex;
+    align-items: center !important;
+    justify-content: start !important;
+    
+}
+.hero{display: grid;
+    width: 100%;
+    place-items: start !important;
+    align-items: center !important;
+    background-size: cover;
+    background-position: center;}
