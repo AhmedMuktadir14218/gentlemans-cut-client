@@ -3,7 +3,7 @@ import homebgimg from "../../images/mostafa-meraji-5npGPG0sSVk-unsplash.jpg";
 // import homebgimg2 from "../../images/mostafa-meraji-v7DgWdQL_eE-unsplash.jpg";
 // import homebgimg3 from "../../images/allef-vinicius-IvQeAVeJULw-unsplash.jpg";
 import './Banner.css';
-import phone from '../../images/phone-28-16.png'
+import phone from '../../images/phone-28-24.png'
 const Banner = () => {
 
 
@@ -47,8 +47,15 @@ const Banner = () => {
       3891 Ranchview Dr. Richardson, <br />
       California 62639
       </p>
-      <h1> <span> <img src={phone} alt="" /> </span> +1 234 567 890</h1>
-      <button className="btn btn-primary">BOOK NOW</button>
+      <div style={{"display":"flex"}}>
+        <div><span> <img src={phone} alt="" /> </span></div>
+        
+      <h1>  +1 234 567 890</h1>
+      </div>
+      <div className='my-3.5'>
+        
+      <button className="btn btn-primary"> BOOK NOW</button>
+      </div>
     </div>
   </div>
 </div>
