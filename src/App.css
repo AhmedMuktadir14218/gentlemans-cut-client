@@ -1,9 +1,4 @@
-#light {
-    background-color: white;
-} 
-#dark {
-    background-color: rgb(41, 37, 37);
-} 
+
 
 .App{
     background-color: #202020;
@@ -16,6 +11,14 @@
     border-radius: 0;
     padding: 5px 20px;
 }
+
+.redLine{
+    width: 135px;
+    height: 55px;
+    border-bottom: 5px solid rgb(255, 0, 0);
+    position: absolute;
+    }
+
 /* .bannertext {
     justify-content: start !important;
 

@@ -43,8 +43,8 @@ const Navbar = () => {
 </label>    
     </React.Fragment>
     const SizeNav={
-        "margin-left":"90px",
-        "margin-right":"110px",
+        "margin-left":"135px",
+        "margin-right":"135px",
         "color":"white",
         // "font-family": "'Roboto Slab', sans-serif",
         "font-family": "'Roboto Condensed', sans-serif"

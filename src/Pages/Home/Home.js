@@ -1,5 +1,8 @@
 import React from 'react';
 import Banner from './Banner';
+import ShortInfo from './ShortInfo';
+// import Line from './line';
+import RedLine from './RedLine';
 
 // import homebgimg from "../../images/mostafa-meraji-5npGPG0sSVk-unsplash.jpg";
 // import homebgimg2 from "../../images/mostafa-meraji-v7DgWdQL_eE-unsplash.jpg";
@@ -26,6 +29,9 @@ const Home = () => {
       </div>
     </div> */}
             <Banner></Banner>
+            {/* <Line></Line> */}
+            <RedLine></RedLine>
+            <ShortInfo></ShortInfo>
         </div>
     );
 };
