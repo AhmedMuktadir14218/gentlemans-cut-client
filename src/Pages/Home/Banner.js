@@ -3,7 +3,7 @@ import homebgimg from "../../images/mostafa-meraji-5npGPG0sSVk-unsplash.jpg";
 // import homebgimg2 from "../../images/mostafa-meraji-v7DgWdQL_eE-unsplash.jpg";
 // import homebgimg3 from "../../images/allef-vinicius-IvQeAVeJULw-unsplash.jpg";
 import './Banner.css';
-
+import phone from '../../images/phone-28-16.png'
 const Banner = () => {
 
 
@@ -42,7 +42,12 @@ const Banner = () => {
     <img src="/src/images/allef-vinicius-IvQeAVeJULw-unsplash.jpg" alt='' className="max-w-sm rounded-lg shadow-2xl" />
     <div  style={SizeNav}>
       <h1 className="text-5xl font-bold">We Will Keep You An <br /> Impacable Look!</h1>
-      <p className="py-6 ">Provident cupiditate voluptatem et in. <br /> Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+      {/* <p className="py-6 ">Provident cupiditate voluptatem et in. <br /> Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p> */}
+      <p className='my-2.5 text-slate-300'>
+      3891 Ranchview Dr. Richardson, <br />
+      California 62639
+      </p>
+      <h1> <span> <img src={phone} alt="" /> </span> +1 234 567 890</h1>
       <button className="btn btn-primary">BOOK NOW</button>
     </div>
   </div>

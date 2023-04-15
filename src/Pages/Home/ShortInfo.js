@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 const ShortInfo = () => {
 
   const SizeNav={
@@ -27,8 +28,17 @@ const ShortInfo = () => {
         <div>
             <p className='text-slate-300' >Et tellus rhoncus urna a. Tempus felis, sociis lorem aliquet nibh pellentesque. Vitae nunc, dolor, blandit eget eleifend etiam id. Amet arcu lobortis sed pulvinar cursus pretium sit pretium.
 </p>
-    <div className=" ">
-      
+    <div className=" my-3.5 grid grid-cols-1 lg:grid-cols-2 gap-2">
+      <div className='my-3.5'>
+        <h1 className='text-xl font-bold' > SINCE 2015</h1>
+        <p className='my-3.5 text-slate-300'>Dui cursus neque et at ipsum. Cursus urna fringilla nisl enim duis cras odio.
+</p>
+      </div >
+      <div className='my-3.5'>
+        <h1 className='text-xl font-bold' >1000+ CLIENTS</h1>
+        <p className='my-3.5 text-slate-300'>Dui cursus neque et at ipsum. Cursus urna fringilla nisl enim duis cras odio.
+</p>
+      </div>
     </div>    
 {/* 
     <p>
