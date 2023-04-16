@@ -33,6 +33,7 @@ const ShortInfo = () => {
         <h1 className='text-xl font-bold' > SINCE 2015</h1>
         <p className='my-3.5 text-slate-300'>Dui cursus neque et at ipsum. Cursus urna fringilla nisl enim duis cras odio.
 </p>
+<button className="btn btn-primary"> Learn More</button>
       </div >
       <div className='my-3.5'>
         <h1 className='text-xl font-bold' >1000+ CLIENTS</h1>
@@ -40,19 +41,6 @@ const ShortInfo = () => {
 </p>
       </div>
     </div>    
-{/* 
-    <p>
-    PROFESSIONAL BARBERSHOP FOR MEN ONLY
- 
-Et tellus rhoncus urna a. Tempus felis, sociis lorem aliquet nibh pellentesque. Vitae nunc, dolor, blandit eget eleifend etiam id. Amet arcu lobortis sed pulvinar cursus pretium sit pretium.
-SINCE 2015
-Dui cursus neque et at ipsum. Cursus urna fringilla nisl enim duis cras odio.
-1000+ CLIENTS
-Metus varius vitae habitant lorem. Porta scelerisque facilisi.
-SERVICES
-LEARN MORE
-      
-      </p>       */}
         </div>
 </div>
 

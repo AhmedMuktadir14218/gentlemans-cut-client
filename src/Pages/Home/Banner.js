@@ -19,20 +19,6 @@ const Banner = () => {
 
 
   return (
-    // <div className="hero min-h-screen hero-overlay bg-opacity-40">
-    //   <div className="hero min-h-screen hero-overlay bg-opacity-40" style={{ backgroundImage: `url(${homebgimg3})` }}>
-
-    //     <div style={leftTextArea}> 
-    //       <div className="bannertext text-center text-neutral-content">
-    //         <div className="max-w-md text-left">
-    //           <h1 className="mb-5 text-5xl font-bold">We Will Keep You An Impacable Look</h1>
-    //           <p className="mb-3">Provident cupiditate voluptatem Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excet in. Quaerat fugiat ut assumenda excepturi exercitationem quasi.</p>
-    //           <button className="btn btn-primary">Book Now</button>
-    //         </div>
-    //       </div>
-    //     </div>
-    //   </div>
-    // </div>
   
 
 
