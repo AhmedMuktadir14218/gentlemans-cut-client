@@ -19,17 +19,14 @@ const Banner = () => {
 
 
   return (
-  
 
-
-    <div>
+<div>
       <div className="hero min-h-screen bg-base-200" style={{ backgroundImage: `url(${homebgimg})` }}>
   <div className="hero-content  lg:flex-row-reverse">
     <img src="/src/images/allef-vinicius-IvQeAVeJULw-unsplash.jpg" alt='' className="max-w-sm rounded-lg shadow-2xl" />
     <div  style={SizeNav}>
       <h1 className="text-5xl font-bold">We Will Keep You An <br /> Impacable Look!</h1>
-      {/* <p className="py-6 ">Provident cupiditate voluptatem et in. <br /> Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p> */}
-      <p className='my-2.5 text-slate-300'>
+     <p className='my-2.5 text-slate-300'>
       3891 Ranchview Dr. Richardson, <br />
       California 62639
       </p>
