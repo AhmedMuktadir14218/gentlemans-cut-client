@@ -3,7 +3,7 @@ import homebgimg from "../../images/mostafa-meraji-5npGPG0sSVk-unsplash.jpg";
 // import homebgimg2 from "../../images/mostafa-meraji-v7DgWdQL_eE-unsplash.jpg";
 // import homebgimg3 from "../../images/allef-vinicius-IvQeAVeJULw-unsplash.jpg";
 import './Banner.css';
-import phone from '../../images/phone-28-24.png'
+import phone from '../../images/phone-28-24.png';
 const Banner = () => {
 
 
