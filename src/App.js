@@ -14,7 +14,7 @@ function App() {
   return (
     // <ThemeContext.Provider value={{theme,toggleTheme}}>
       // <div className='App' id={theme}>
-      <div className='App' >
+      <div className=' bg-neutra App' >
      <RouterProvider router={router} ></RouterProvider>
     </div>
     // </ThemeContext.Provider>
