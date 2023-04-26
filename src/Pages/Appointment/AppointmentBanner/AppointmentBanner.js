@@ -4,21 +4,16 @@ import { DayPicker } from 'react-day-picker';
 import AppointmentImg from '../../../images/allef-vinicius-IvQeAVeJULw-unsplash.jpg';
 const AppointmentBanner = ({selectedDate, setSelectedDate}) => {
 
-    const css = `
-  .my-selected:not([disabled]) { 
-    font-weight: bold; 
-    border: 2px solid currentColor;
-  }
-  .my-selected:hover:not([disabled]) { 
-    border-color: blue;
-    color: blue;
-  }
-  .my-today { 
-    font-weight: bold;
-    font-size: 140%; 
-    color: red;
-  }
-`;
+    const css = {"--rdp-cell-size": "40px",
+    "--rdp-accent-color": "#0000ff",
+    "--rdp-background-color": "#ff0000",
+    /* Switch to dark colors for dark themes */
+    "--rdp-accent-color-dark": "#3003e1",
+    "--rdp-background-color-dark": "#ff0000",
+    /* Outline border for focused elements */
+    "--rdp-outline": "2px solid var(--rdp-accent-color)",
+    /* Outline border for focused and selected elements */
+    "--rdp-outline-selected": "2px solid rgba(0, 0, 0, 0.75)"}
     
     return (
         <header className='my-6'>
