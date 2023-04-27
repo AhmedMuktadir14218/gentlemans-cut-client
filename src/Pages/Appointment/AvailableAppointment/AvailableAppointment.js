@@ -3,8 +3,8 @@ import React from 'react';
 
 const AvailableAppointment = ({selectedDate, setSelectedDate}) => {
     return (
-        <div>
-            <p>You have selected date: {format(selectedDate,'PP')}</p>
+        <div className='mt-16'>
+            <p className='text-center font-bold text-primary'>Available Appointment on {format(selectedDate,'PP')}</p>
                     
         </div>
     );

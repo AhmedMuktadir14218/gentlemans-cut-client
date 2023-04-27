@@ -4,6 +4,7 @@ import homebgimg from "../../images/mostafa-meraji-5npGPG0sSVk-unsplash.jpg";
 // import homebgimg3 from "../../images/allef-vinicius-IvQeAVeJULw-unsplash.jpg";
 import './Banner.css';
 import phone from '../../images/phone-28-24.png';
+import { Link } from 'react-router-dom';
 const Banner = () => {
 
 
@@ -37,7 +38,7 @@ const Banner = () => {
       </div>
       <div className='my-3.5'>
         
-      <button className="btn btn-primary"> BOOK NOW</button>
+      <button className="btn btn-primary"><Link to="/appointment">BOOK NOW</Link> </button>
       </div>
     </div>
   </div>
