@@ -1,6 +1,7 @@
 import React from 'react';
 
 import AppointmentBanner from '../AppointmentBanner/AppointmentBanner';
+import AvailableAppointment from '../AvailableAppointment/AvailableAppointment';
 
 const Appointment = () => {
     const SizeNav={
@@ -14,6 +15,8 @@ const Appointment = () => {
         // font-family: 'Roboto Condensed Light', sans-serif;
     
     };
+    
+    const [selectedDate, setSelectedDate] = React.useState(new Date());
     return (
         <div style={SizeNav}>
             {/* <div className="hero min-h-screen ">
@@ -27,7 +30,8 @@ const Appointment = () => {
   </div>
 </div> */}
 
-<AppointmentBanner></AppointmentBanner>
+<AppointmentBanner selectedDate={selectedDate} setSelectedDate={setSelectedDate}></AppointmentBanner>
+<AvailableAppointment selectedDate={selectedDate} setSelectedDate={setSelectedDate} ></AvailableAppointment>
         </div>
     );
 };

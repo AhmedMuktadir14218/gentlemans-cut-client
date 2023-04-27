@@ -1,21 +1,23 @@
 import React from 'react';
 
-import { DayPicker } from 'react-day-picker';
+import { ClassNames, DayPicker } from 'react-day-picker';
 import AppointmentImg from '../../../images/allef-vinicius-IvQeAVeJULw-unsplash.jpg';
-// import styles from 'react-day-picker/dist/style.module.css';
+import styles from 'react-day-picker/dist/style.module.css';
 import { format } from 'date-fns';
-// const AppointmentBanner = ({selectedDate, setSelectedDate}) => {
-    const AppointmentBanner = () => {
-    const [selectedDate, setSelectedDate] = React.useState(new Date());
+const AppointmentBanner = ({selectedDate, setSelectedDate}) => {
+    // const AppointmentBanner = () => {
+    // const [selectedDate, setSelectedDate] = React.useState(new Date());
 
-    // const classNames: abcd = {
-    //     ...styles,
-    //     head: 'style_root__Vd1RM'
-    //   };
-      const css = `
-      .style_root__Vd1RM { --rdp-background-color: #ff0000;
-         --rdp-accent-color: #ff0000;}
-    `;
+    const classNames: ClassNames = {
+        ...styles,
+        head: 'style_root__Vd1RM'
+      };
+    //   const css = `
+    
+
+    //   .style_root__Vd1RM { --rdp-background-color: #ff0000;
+    //      --rdp-accent-color: #ff0000;}
+    // `;
     
     return (
         <header className='my-6'>
@@ -23,16 +25,19 @@ import { format } from 'date-fns';
                 <div className="hero-content flex-col lg:flex-row-reverse">
                     <img src={AppointmentImg} alt="dentist chair" className="max-w-sm rounded-lg shadow-2xl" />
                     <div className='mr-6 sm:w-full'>
-{/* <style>{`.style_root__Vd1RM { --rdp-background-color: #ff0000; --rdp-accent-color: #ff0000;}`}</style>  */}
-            <style>{css}</style>
+<style>{`.style_root__Vd1RM { --rdp-background-color: #ff0000; --rdp-accent-color: #ff0000;}`}</style> 
+            {/* <style>{css}</style> */}
                         <DayPicker  
                             mode='single'
-// classNames={classNames}
+                            classNames={classNames}
                             selected={selectedDate}
                             onSelect={setSelectedDate}
+                            // modifiersClassNames={{
+                            //     selected: 'style_root__Vd1RM'
+                            //   }}
                         />
                         
-                    <p>You have selected date: {format(selectedDate,'PP')}</p>
+                    {/* <p>You have selected date: {format(selectedDate,'PP')}</p> */}
                     </div>
                 </div>
             </div>
