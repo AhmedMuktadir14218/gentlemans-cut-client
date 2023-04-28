@@ -3,6 +3,7 @@ import Banner from './Banner';
 import ShortInfo from './ShortInfo';
 // import Line from './line';
 import RedLine from './RedLine';
+import Appointment from '../Appointment/Appointment/Appointment';
 
 // import homebgimg from "../../images/mostafa-meraji-5npGPG0sSVk-unsplash.jpg";
 // import homebgimg2 from "../../images/mostafa-meraji-v7DgWdQL_eE-unsplash.jpg";
@@ -32,6 +33,7 @@ const Home = () => {
             {/* <Line></Line> */}
             <RedLine></RedLine>
             <ShortInfo></ShortInfo>
+            <Appointment></Appointment>
         </div>
     );
 };

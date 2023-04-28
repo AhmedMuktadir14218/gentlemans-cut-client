@@ -3,7 +3,7 @@ import React from 'react';
 import { ClassNames, DayPicker } from 'react-day-picker';
 import AppointmentImg from '../../../images/allef-vinicius-IvQeAVeJULw-unsplash.jpg';
 import styles from 'react-day-picker/dist/style.module.css';
-import { format } from 'date-fns';
+// import { format } from 'date-fns';
 const AppointmentBanner = ({selectedDate, setSelectedDate}) => {
     // const AppointmentBanner = () => {
     // const [selectedDate, setSelectedDate] = React.useState(new Date());

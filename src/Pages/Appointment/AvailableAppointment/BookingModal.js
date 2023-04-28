@@ -65,10 +65,13 @@
 
 
 
+import { format } from 'date-fns';
 import React from 'react';
+const BookingModal = ({ service, setService, selectedDate }) => {
+    // treatment is just another name of appointmentOptions with name, slots, _id
+    const { name, slots } = service;
+    const date = format(selectedDate, 'PP');
 
-const BookingModal = ({service}) => {
-    const {name,slots}=service;
     return (
 //         <div>
 //             {/* modal start*/}
@@ -96,20 +99,20 @@ const BookingModal = ({service}) => {
                     <label htmlFor="booking-modal" className="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
                     <h3 className="text-lg font-bold">{name}</h3>
                     <form /*</div>onSubmit={handleBooking}*/ className='grid grid-cols-1 gap-3 mt-10'>
-                        <input type="text" disabled /*value={date}*/ className="input w-full input-bordered " />
-                        {/* <select name="slot" className="select select-bordered w-full">
+                        <input type="text"  value={date} className="bg-accent input w-full  " />
+                        <select name="slot" className="bg-accent select select-bordered w-full">
                             {
                                 slots.map((slot, i) => <option
                                     value={slot}
                                     key={i}
                                 >{slot}</option>)
                             }
-                        </select> */}
+                        </select>
                         <input name="name" type="text" placeholder="Your Name" className=" bg-accent input w-full input-bordered" />
                         <input name="email" type="email" placeholder="Email Address" className="bg-accent input w-full input-bordered" />
                         <input name="phone" type="text" placeholder="Phone Number" className="bg-accent input w-full input-bordered" />
                         <br />
-                        <input className='btn btn-accent w-full' type="submit" value="Submit" />
+                        <input className='btn btn-primary w-full' type="submit" value="Confirm" />
                     </form>
                 </div>
             </div>
