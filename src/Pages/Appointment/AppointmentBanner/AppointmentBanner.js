@@ -18,9 +18,20 @@ const AppointmentBanner = ({selectedDate, setSelectedDate}) => {
     //   .style_root__Vd1RM { --rdp-background-color: #ff0000;
     //      --rdp-accent-color: #ff0000;}
     // `;
+    const SizeNav={
+        "margin-left":"135px",
+            "margin-right":"135px",
+              "margin-top":"90px",
+        "margin-bottom":"90px",
+        "color":"white",
+        // "font-family": "'Roboto Slab', sans-serif",
+        "font-family": "'Roboto Condensed', sans-serif"
+        // font-family: 'Roboto Condensed Light', sans-serif;
+    
+    };
     
     return (
-        <header className='my-6'>
+        <header style={SizeNav} className='my-6'>
             <div className="hero">
                 <div className="hero-content flex-col lg:flex-row-reverse">
                     <img src={AppointmentImg} alt="dentist chair" className="max-w-sm rounded-lg shadow-2xl" />

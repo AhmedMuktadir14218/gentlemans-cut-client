@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import AppointmentOption from './AppointmentOption';
 const AvailableAppointment = ({selectedDate, setSelectedDate}) => {
     const [appointmentOptions, setAppointmentOptions] = useState([]);
-    const [treatment, setTreatment] = useState(null);
+    // const [treatment, setTreatment] = useState(null);
 
     useEffect(() => {
         fetch('services.json')
