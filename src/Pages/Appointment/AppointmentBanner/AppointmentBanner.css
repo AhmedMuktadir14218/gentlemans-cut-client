@@ -15,7 +15,7 @@
 
 .rdp {
     --rdp-cell-size: 40px;
-    --rdp-accent-color: #0000ff;
+    --rdp-accent-color: #201f1f5b;
     --rdp-background-color: #e7edff;
     /* Switch to dark colors for dark themes */
     --rdp-accent-color-dark: #3003e1;
