@@ -101,24 +101,6 @@ const BookingModal = ({ service, setService, selectedDate }) => {
 
 
     return (
-//         <div>
-//             {/* modal start*/}
-// <div className='bg-neutral'>
-// <input type="checkbox" id="booking-modal" className="modal-toggle " />
-// <div className="modal  modal-bottom sm:modal-middle">
-//   <div className="modal-box bg-neutral shadow-xl">
-//     <h3 className="font-bold text-lg">{name}</h3>
-//     <p className="py-4">You've been selected for a chance to get one year of subscription to use Wikipedia for free!</p>
-//     <div className="modal-action">
-//       <label htmlFor="my-modal-6" className="btn btn-primary">Confirm</label>
-//     </div>
-//   </div>
-// </div>
-// </div>
-
-// {/* Put this part before </body> tag */}
-//         </div>
-
 
  <>
             <input type="checkbox" id="booking-modal" className="modal-toggle" />
@@ -126,9 +108,9 @@ const BookingModal = ({ service, setService, selectedDate }) => {
                 <div className="modal-box bg-neutral shadow-xl relative">
                     <label htmlFor="booking-modal" className="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
                     <h3 className="text-lg font-bold">{name}</h3>
-                    <form onSubmit={handleBooking} className='grid grid-cols-1 gap-3 mt-10'>
-                        <input type="text"  value={date} className="bg-accent input w-full  " />
-                        <select name="slot" className="bg-accent select select-bordered w-full">
+                    <form onSubmit={handleBooking}  className='grid grid-cols-1 gap-3 mt-10'>
+                        <input type="text"  value={date} className="bg-accent input w-full  " required/>
+                        <select name="slot" className="bg-accent select select-bordered w-full" required>
                             {
                                 slots.map((slot, i) => <option
                                     value={slot}
@@ -136,14 +118,14 @@ const BookingModal = ({ service, setService, selectedDate }) => {
                                 >{slot}</option>)
                             }
                         </select>
-                        <select name="preferredlocation" /*value={preferredlocation}*/ className="bg-accent select select-bordered w-full">
+                        <select name="preferredlocation" /*value={preferredlocation}*/ className="bg-accent select select-bordered w-full" required>
                             <option >Offline Store</option>
                             {/* <option disabled selected>preferredlocation</option> */}
                             <option>Home Service</option>
                         </select>
-                        <input name="CLientName" type="text" placeholder="Your Name" className=" bg-accent input w-full input-bordered" />
-                        <input name="email" type="email" placeholder="Email Address" className="bg-accent input w-full input-bordered" />
-                        <input name="phone" type="text" placeholder="Phone Number" className="bg-accent input w-full input-bordered" />
+                        <input name="CLientName" type="text" placeholder="Your Name" className=" bg-accent input w-full input-bordered" required />
+                        <input name="email" type="email" placeholder="Email Address" className="bg-accent input w-full input-bordered" required/>
+                        <input name="phone" type="text" placeholder="Phone Number" className="bg-accent input w-full input-bordered" required/>
                         <br />
                         <input className='btn btn-primary w-full' type="submit" value="Confirm" />
                     </form>

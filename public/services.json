@@ -1,7 +1,7 @@
 [
     {
       "_id": 1,
-      "name": "Teeth Orthodontics",
+      "name": "HAIRCUT",
       "slots": [
         "08.00 AM - 08.30 AM",
         "08.30 AM - 09.00 AM",
@@ -23,7 +23,7 @@
     },
     {
       "_id": 2,
-      "name": "Cosmetic Dentistry",
+      "name": "MUSTACHE",
       "slots": [
         "08.00 AM - 08.30 AM",
         "08.30 AM - 09.00 AM",
@@ -45,7 +45,7 @@
     },
     {
       "_id": 3,
-      "name": "Teeth Cleaning",
+      "name": "SHAVE",
       "slots": [
         "08.00 AM - 08.30 AM",
         "08.30 AM - 09.00 AM",
@@ -67,7 +67,7 @@
     },
     {
       "_id": 4,
-      "name": "Cavity Protection",
+      "name": "Manicure & Pedicure",
       "slots": [
         "08.00 AM - 08.30 AM",
         "08.30 AM - 09.00 AM",
@@ -89,7 +89,7 @@
     },
     {
       "_id": 5,
-      "name": "Pediatric Dental",
+      "name": "BREADTRIM",
       "slots": [
         "08.00 AM - 08.30 AM",
         "08.30 AM - 09.00 AM",
@@ -111,7 +111,7 @@
     },
     {
       "_id": 6,
-      "name": "Oral Surgery",
+      "name": "HAIR DYEING",
       "slots": [
         "08.00 AM - 08.30 AM",
         "08.30 AM - 09.00 AM",
