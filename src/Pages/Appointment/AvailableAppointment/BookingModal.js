@@ -84,7 +84,7 @@ const BookingModal = ({ service, setService, selectedDate }) => {
         const booking = {
             appointmentDate: date,
             service: name,
-            patient: CLientName,
+            clientName: CLientName,
             slot,
             email,
             phone,
