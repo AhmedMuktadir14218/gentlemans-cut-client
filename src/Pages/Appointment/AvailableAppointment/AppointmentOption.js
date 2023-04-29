@@ -2,12 +2,12 @@ import React from 'react';
 import dummyImg from './../../../images/mostafa-meraji-v7DgWdQL_eE-unsplash.jpg';
 
 const AppointmentOption = ({appointmentOption,setService}) => {
-    const {name,slots} =appointmentOption
+    const {name,slots,img} =appointmentOption
     return (
         <div>
             <div className="card w-86 bg-neutral shadow-xl">
   <figure className="px-8 pt-8">
-    <img src={dummyImg} alt="Shoes" className="rounded-xl" />
+    <img src={img} alt="Shoes" className="rounded-xl" />
   </figure>
   <div className="card-body items-center text-center">
     <h2 className="card-title">{name}</h2>

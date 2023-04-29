@@ -2,6 +2,7 @@
     {
       "_id": 1,
       "name": "HAIRCUT",
+      "img": "https://i.ibb.co/5Rsj4fX/HAIRCUT.jpg",
       "slots": [
         "08.00 AM - 08.30 AM",
         "08.30 AM - 09.00 AM",
@@ -24,7 +25,7 @@
     {
       "_id": 2,
       "name": "MUSTACHE",
-      "slots": [
+      "img": "https://i.ibb.co/PTbTVs3/MUSTACHE.jpg","slots": [
         "08.00 AM - 08.30 AM",
         "08.30 AM - 09.00 AM",
         "09.00 AM - 9.30 AM",
@@ -46,7 +47,7 @@
     {
       "_id": 3,
       "name": "SHAVE",
-      "slots": [
+      "img": "https://i.ibb.co/fVWhFGy/SHAVE.jpg","slots": [
         "08.00 AM - 08.30 AM",
         "08.30 AM - 09.00 AM",
         "09.00 AM - 9.30 AM",
@@ -68,7 +69,7 @@
     {
       "_id": 4,
       "name": "Manicure & Pedicure",
-      "slots": [
+      "img": "https://i.ibb.co/JKQFf3H/Manicure-Pedicure.jpg","slots": [
         "08.00 AM - 08.30 AM",
         "08.30 AM - 09.00 AM",
         "09.00 AM - 9.30 AM",
@@ -90,7 +91,7 @@
     {
       "_id": 5,
       "name": "BREADTRIM",
-      "slots": [
+      "img": "https://i.ibb.co/R3CJ1qB/BREADTRIM.jpg","slots": [
         "08.00 AM - 08.30 AM",
         "08.30 AM - 09.00 AM",
         "09.00 AM - 9.30 AM",
@@ -112,7 +113,7 @@
     {
       "_id": 6,
       "name": "HAIR DYEING",
-      "slots": [
+      "img": "https://i.ibb.co/mcpG5CB/HAIR-DYEING.png","slots": [
         "08.00 AM - 08.30 AM",
         "08.30 AM - 09.00 AM",
         "09.00 AM - 9.30 AM",
