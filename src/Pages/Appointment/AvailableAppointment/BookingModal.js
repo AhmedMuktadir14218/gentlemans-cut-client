@@ -78,12 +78,14 @@ const BookingModal = ({ service, setService, selectedDate }) => {
         const form = event.target;
         const slot = form.slot.value;
         const CLientName = form.CLientName.value;
+        const preferredlocation = form.preferredlocation.value;
         const email = form.email.value;
         const phone = form.phone.value;
         // [3, 4, 5].map((value, i) => console.log(value))
         const booking = {
             appointmentDate: date,
             service: name,
+            preferredlocation:preferredlocation,
             clientName: CLientName,
             slot,
             email,
@@ -133,6 +135,11 @@ const BookingModal = ({ service, setService, selectedDate }) => {
                                     key={i}
                                 >{slot}</option>)
                             }
+                        </select>
+                        <select name="preferredlocation" /*value={preferredlocation}*/ className="bg-accent select select-bordered w-full">
+                            <option >Offline Store</option>
+                            {/* <option disabled selected>preferredlocation</option> */}
+                            <option>Home Service</option>
                         </select>
                         <input name="CLientName" type="text" placeholder="Your Name" className=" bg-accent input w-full input-bordered" />
                         <input name="email" type="email" placeholder="Email Address" className="bg-accent input w-full input-bordered" />
