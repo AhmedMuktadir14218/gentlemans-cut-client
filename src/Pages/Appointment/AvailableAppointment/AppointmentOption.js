@@ -1,5 +1,5 @@
 import React from 'react';
-import dummyImg from './../../../images/mostafa-meraji-v7DgWdQL_eE-unsplash.jpg';
+// import dummyImg from './../../../images/mostafa-meraji-v7DgWdQL_eE-unsplash.jpg';
 
 const AppointmentOption = ({appointmentOption,setService}) => {
     const {name,slots,img} =appointmentOption
