@@ -12,6 +12,7 @@
     "react-day-picker": "^8.7.1",
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.43.9",
+    "react-hot-toast": "^2.4.1",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
