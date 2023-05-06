@@ -4,7 +4,6 @@ import Home from '../Pages/Home/Home';
 import Login from "../Pages/Login/Login";
 import Appointment from "../Pages/Appointment/Appointment/Appointment";
 import Service from "../Pages/Service/Service";
-// import SignUp from "../Pages/SignUp/Signup";
 import SignUp from "../Pages/SignUp/SignUp";
  const router = createBrowserRouter([
     {
