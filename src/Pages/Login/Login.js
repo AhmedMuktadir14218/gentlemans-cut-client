@@ -3,6 +3,7 @@ import { useForm } from 'react-hook-form';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Context/AuthProvider';
 // import { AuthContext } from '../../contexts/AuthProvider';
+import SocialLogin from '../Login/SocialLogin/SocialLogin';
 
 const Login = () => {
     const { register, formState: { errors }, handleSubmit } = useForm();
@@ -60,7 +61,8 @@ const Login = () => {
                 </form>
                 <p className='text-white'>New to Gentlemen's Cut ? <Link className='text-primary' to="/signup">Create new Account</Link></p>
                 <div className="text-white divider">OR</div>
-                <button className='btn btn-outline text-white w-full'>CONTINUE WITH GOOGLE</button>
+                {/* <button className='btn btn-outline text-white w-full'>CONTINUE WITH GOOGLE</button> */}
+                <SocialLogin></SocialLogin>
             </div>
         </div>
     );
