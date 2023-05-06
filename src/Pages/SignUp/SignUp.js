@@ -2,15 +2,21 @@
 import React, { useContext, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import toast from 'react-hot-toast';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Context/AuthProvider';
+import SocialLogin from '../Login/SocialLogin/SocialLogin';
 // import { AuthContext } from '../../contexts/AuthProvider';
 
 const SignUp = () => {
 
     const { register, handleSubmit, formState: { errors } } = useForm();
     const { createUser, updateUser } = useContext(AuthContext);
-    const [signUpError, setSignUPError] = useState('')
+    const [signUpError, setSignUPError] = useState('');
+    const location = useLocation();
+    const navigate = useNavigate();
+    const from = location.state?.from?.pathname || '/'; 
+
+
     const handleSignUp = (data) => {
         console.log(data);
         setSignUPError('');
@@ -18,7 +24,8 @@ const SignUp = () => {
             .then(result => {
                 const user = result.user;
                 console.log(user);
-                toast('User Created Successfully.')
+                toast('User Created Successfully.');
+                navigate(from, {replace: true});
                 const userInfo = {
                     displayName: data.name
                 }
@@ -67,7 +74,8 @@ const SignUp = () => {
                 </form>
                 <p className='text-white'>Already have an account <Link className='text-primary' to="/login">Please Login</Link></p>
                 <div className="divider">OR</div>
-                <button className='btn btn-outline  text-white w-full'>CONTINUE WITH GOOGLE</button>
+                {/* <button className='btn btn-outline  text-white w-full'>CONTINUE WITH GOOGLE</button> */}
+                <SocialLogin></SocialLogin>
 
             </div>
         </div>
