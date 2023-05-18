@@ -1,5 +1,5 @@
 import React from 'react';
-import AvailableAppointment from '../Appointment/AvailableAppointment/AvailableAppointment';
+// import AvailableAppointment from '../Appointment/AvailableAppointment/AvailableAppointment';
 import Appointment from '../Appointment/Appointment/Appointment';
 
 const Service = () => {

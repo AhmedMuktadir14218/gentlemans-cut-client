@@ -1,9 +1,19 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import BookingList from './BookingList';
+// import MyAppointment from './MyAppointment';
 
 const Dashboard = () => {
+    const [bookingListOptions, setBookingListOptions] = useState([]);
+     useEffect(() => {
+        fetch('http://localhost:5000/bookinglist')
+            .then(res => res.json())
+            .then(data => setBookingListOptions(data))
+    }, [])
     return (
         <div>
-            <h1>Dashboard</h1>
+            {/* <MyAppointment></MyAppointment> */}
+
+        <BookingList></BookingList>
         </div>
     );
 };

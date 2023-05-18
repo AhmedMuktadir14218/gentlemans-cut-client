@@ -1,14 +1,14 @@
 // import { getAuth } from 'firebase/auth';
 import React from 'react';
-import { useSignInWithGithub, useSignInWithGoogle } from 'react-firebase-hooks/auth';
+import {  useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { useLocation, useNavigate } from 'react-router-dom';
 import app from '../../../Firebase/firebase.config';
 import { getAuth } from 'firebase/auth';
 // import google from '../../../images/google.png';
 const SocialLogin = () => {
     const auth = getAuth(app);
-    const [signInWithGoogle, user,  error] = useSignInWithGoogle(auth);
-    const [signInWithGithub, user1,  error1] = useSignInWithGithub(auth);
+    const [signInWithGoogle, user,  error, user1,  error1] = useSignInWithGoogle(auth);
+    // const [signInWithGithub, user1,  error1] = useSignInWithGithub(auth);
     const navigate = useNavigate();
     const location = useLocation();
 

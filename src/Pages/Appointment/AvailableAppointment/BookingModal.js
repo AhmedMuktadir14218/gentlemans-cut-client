@@ -67,10 +67,12 @@
 
 import { format } from 'date-fns';
 import React from 'react';
+import { toast } from 'react-hot-toast';
 const BookingModal = ({ service, setService, selectedDate }) => {
     // treatment is just another name of appointmentOptions with name, slots, _id
     const { name, slots } = service;
     const date = format(selectedDate, 'PP');
+    
 
     
     const handleBooking = event => {
@@ -81,6 +83,7 @@ const BookingModal = ({ service, setService, selectedDate }) => {
         const preferredlocation = form.preferredlocation.value;
         const email = form.email.value;
         const phone = form.phone.value;
+        const address = form.address.value;
         // [3, 4, 5].map((value, i) => console.log(value))
         const booking = {
             appointmentDate: date,
@@ -90,17 +93,54 @@ const BookingModal = ({ service, setService, selectedDate }) => {
             slot,
             email,
             phone,
+            address
         }
+        //         console.log(booking);
+        // setService(null);
 
         // TODO: send data to the server
         // and once data is saved then close the modal 
         // and display success toast
-        console.log(booking);
+
+        fetch('http://localhost:5000/bookings', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(booking)
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+        //         console.log(booking);
+        // setService(null);
+        //             toast.success('Booking confirmed');
+                if (data.acknowledged) {
+                    console.log(booking);
         setService(null);
+                    toast.success('Booking confirmed');
+                    // refetch()
+                }
+                else{
+                    toast.error(data.message);
+                }
+            })
+
+
+
+
+        
     }
 
 
-    return (
+ 
+
+
+
+
+
+
+return (
 
  <>
             <input type="checkbox" id="booking-modal" className="modal-toggle" />
@@ -119,12 +159,15 @@ const BookingModal = ({ service, setService, selectedDate }) => {
                             }
                         </select>
                         <select name="preferredlocation" /*value={preferredlocation}*/ className="bg-accent select select-bordered w-full" required>
-                            <option >Offline Store</option>
+                            <option 
+           >Offline Store</option>
                             {/* <option disabled selected>preferredlocation</option> */}
-                            <option>Home Service</option>
+                            <option  
+         >Home Service</option>
                         </select>
                         <input name="CLientName" type="text" placeholder="Your Name" className=" bg-accent input w-full input-bordered" required />
                         <input name="email" type="email" placeholder="Email Address" className="bg-accent input w-full input-bordered" required/>
+                        <input name="address" type="text" placeholder="Address(If you want to take home service then fill up must be done)" className="bg-accent input w-full input-bordered" />
                         <input name="phone" type="text" placeholder="Phone Number" className="bg-accent input w-full input-bordered" required/>
                         <br />
                         <input className='btn btn-primary w-full' type="submit" value="Confirm" />
