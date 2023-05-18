@@ -7,8 +7,8 @@ const AvailableAppointment = ({selectedDate, setSelectedDate}) => {
     // const [appointmentOptions, setAppointmentOptions] = useState([]);
     const [service, setService] = useState(null);
     const date = format(selectedDate,'PP');
-    // const {data:appointmentOptions =[],refetch } = useQuery({ 
-    const {data:appointmentOptions =[]  } = useQuery({ 
+    const {data:appointmentOptions =[],refetch } = useQuery({ 
+    // const {data:appointmentOptions =[]  } = useQuery({ 
         queryKey: ['appointmentOption',date],
         queryFn: async () =>{ 
         // const res = await fetch(`https://doctor-chamber-server.vercel.app/appointmentOptions?date=${date}`);
@@ -40,7 +40,7 @@ const AvailableAppointment = ({selectedDate, setSelectedDate}) => {
             {
                 service &&
                 
-            <BookingModal  service={service}  setService={setService} selectedDate={selectedDate}></BookingModal>
+            <BookingModal  service={service}  setService={setService}  refetch={refetch} selectedDate={selectedDate}></BookingModal>
             }
                     
         </div>

@@ -68,7 +68,7 @@
 import { format } from 'date-fns';
 import React from 'react';
 import { toast } from 'react-hot-toast';
-const BookingModal = ({ service, setService, selectedDate }) => {
+const BookingModal = ({ service, setService, selectedDate,refetch }) => {
     // treatment is just another name of appointmentOptions with name, slots, _id
     const { name, slots } = service;
     const date = format(selectedDate, 'PP');
@@ -119,7 +119,7 @@ const BookingModal = ({ service, setService, selectedDate }) => {
                     console.log(booking);
         setService(null);
                     toast.success('Booking confirmed');
-                    // refetch()
+                    refetch()
                 }
                 else{
                     toast.error(data.message);
