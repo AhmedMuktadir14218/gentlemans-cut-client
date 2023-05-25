@@ -4,20 +4,15 @@ import { Link } from 'react-router-dom';
 const Footer = () => {
 
     const SizeNav={
-        "margin-left":"135px",
-            "margin-right":"135px",
-              "margin-top":"90px",
-        "margin-bottom":"90px",
+        
         "color":"white",
-        // "font-family": "'Roboto Slab', sans-serif",
         "font-family": "'Roboto Condensed', sans-serif"
-        // font-family: 'Roboto Condensed Light', sans-serif;
     
     };
 
     return (
         <div style={SizeNav}>
-           <footer style={{"color":"#d4d4d4 !important"}} className="footer p-10  text-slate-300 ">
+           <footer style={{"color":"#d4d4d4 !important"}} className="c_padding footer p-10 text-slate-300 ">
   <div>
     <span className="footer-title">Services</span> 
     <Link className="link link-hover">Branding</Link> 
@@ -34,16 +29,7 @@ const Footer = () => {
   </div> 
   <div >
 
-  <span className="footer-title">Newsletter</span> 
-    <div className="form-control w-80">
-      {/* <label className="label">
-        <span className="label-text">Enter your email address</span>
-      </label>  */}
-      <div className="relative ">
-        <input type="text" placeholder="username@site.com" className="input input-bordered w-half pr-16" /> 
-        <button className="btn btn-primary absolute top-0 right-0 rounded-l-none">Subscribe</button>
-      </div>
-    </div>
+ 
     
     <div className=" grid grid-flow-col gap-4 ">
     

@@ -3,20 +3,17 @@ import React, { useState } from 'react';
 import AppointmentOption from './AppointmentOption';
 import BookingModal from './BookingModal';
 import { useQuery } from 'react-query';
-const AvailableAppointment = ({selectedDate, setSelectedDate}) => {
-    // const [appointmentOptions, setAppointmentOptions] = useState([]);
+const AvailableAppointment = ({ selectedDate, setSelectedDate }) => {
     const [service, setService] = useState(null);
-    const date = format(selectedDate,'PP');
-    const {data:appointmentOptions =[],refetch } = useQuery({ 
-    // const {data:appointmentOptions =[]  } = useQuery({ 
-        queryKey: ['appointmentOption',date],
-        queryFn: async () =>{ 
-        // const res = await fetch(`https://doctor-chamber-server.vercel.app/appointmentOptions?date=${date}`);
-        const res = await fetch(`http://localhost:5000/appointmentOptions?date=${date}`);
-        const data = await res.json();
-        return data
-        } 
-    
+    const date = format(selectedDate, 'PP');
+    const { data: appointmentOptions = [], refetch } = useQuery({
+        queryKey: ['appointmentOption', date],
+        queryFn: async () => {
+            const res = await fetch(`http://localhost:5000/appointmentOptions?date=${date}`);
+            const data = await res.json();
+            return data
+        }
+
     })
 
     // useEffect(() => {
@@ -26,12 +23,12 @@ const AvailableAppointment = ({selectedDate, setSelectedDate}) => {
     // }, [])
     return (
         <div className='mt-16'>
-            <p className='text-center text-2xl font-bold text-primary'>Available Appointment on {format(selectedDate,'PP')}</p>
+            <p className='text-center text-2xl font-bold text-primary'>Available Appointment on {format(selectedDate, 'PP')}</p>
 
-            <div className='grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-6'>
+            <div className='c_padding grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-6'>
                 {
-                    appointmentOptions.map(option=> <AppointmentOption
-                    key={option._id} appointmentOption={option}  setService={setService}
+                    appointmentOptions.map(option => <AppointmentOption
+                        key={option._id} appointmentOption={option} setService={setService}
                     >
 
                     </AppointmentOption>)
@@ -39,10 +36,10 @@ const AvailableAppointment = ({selectedDate, setSelectedDate}) => {
             </div>
             {
                 service &&
-                
-            <BookingModal  service={service}  setService={setService}  refetch={refetch} selectedDate={selectedDate}></BookingModal>
+
+                <BookingModal service={service} setService={setService} refetch={refetch} selectedDate={selectedDate}></BookingModal>
             }
-                    
+
         </div>
     );
 };

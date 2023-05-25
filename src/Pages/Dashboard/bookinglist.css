@@ -1,0 +1,14 @@
+.b_table {
+    background-color: #2C2C2C !important;
+    text-align: center;
+    color: #fff;
+}
+
+.b_table th, tr, td {
+    border: 1px solid;
+    padding: 10px 0;
+}
+
+.b_table th {
+    background-color: #D21002;
+}

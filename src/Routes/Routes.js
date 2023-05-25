@@ -5,8 +5,10 @@ import Login from "../Pages/Login/Login";
 import Appointment from "../Pages/Appointment/Appointment/Appointment";
 import Service from "../Pages/Service/Service";
 import SignUp from "../Pages/SignUp/SignUp";
-import Aboute from "../Pages/Aboute/Aboute";
+import About from "../Pages/About/About";
 import Dashboard from "../Pages/Dashboard/Dashboard";
+import Blog from "../Pages/Blog/Blog";
+import Gallery from "../Pages/Gallery/Gallery";
  const router = createBrowserRouter([
     {
         path : '/',
@@ -17,8 +19,16 @@ import Dashboard from "../Pages/Dashboard/Dashboard";
                 element : <Home></Home>
             },
             {
-                path:'/aboute',
-                element : <Aboute></Aboute>
+                path:'/about',
+                element : <About></About>
+            },
+            {
+                path:'/blog',
+                element : <Blog></Blog>
+            },
+            {
+                path:'/gallery',
+                element : <Gallery></Gallery>
             },
             {
                 path:'/login',

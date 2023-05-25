@@ -1,27 +1,17 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 
 const ShortInfo = () => {
 
   const SizeNav={
-    "margin-left":"135px",
-        "margin-right":"135px",
-          "margin-top":"90px",
-    "margin-bottom":"90px",
     "color":"white",
-    // "font-family": "'Roboto Slab', sans-serif",
     "font-family": "'Roboto Condensed', sans-serif"
-    // font-family: 'Roboto Condensed Light', sans-serif;
-
 };
-// const prgph = {
-//   "color":"#d4d4d4 !important"
-// };
 
     return (
       <div>
-        {/* <div className='redLine'></div> */}
-        <div style={SizeNav} className="grid grid-cols-1 lg:grid-cols-2 gap-2 ">
+        <div style={SizeNav} className="c_padding grid grid-cols-1 lg:grid-cols-2 gap-2 ">
         <div>
           <h1 style={{"color":"#d4d4d4 !important"}} className='text-3xl font-bold ' >PROFESSIONAL BARBERSHOP <br /> FOR MEN ONLY</h1>
         </div>
@@ -33,7 +23,7 @@ const ShortInfo = () => {
         <h1 className='text-xl font-bold' > SINCE 2015</h1>
         <p className='my-3.5 text-slate-300 text-sm'>Dui cursus neque et at ipsum. Cursus urna fringilla nisl enim duis cras odio.
 </p>
-<button className="btn btn-primary"> Learn More</button>
+<button className="btn btn-primary"> <Link to="/about">Learn More</Link></button>
       </div >
       <div className='my-3.5'>
         <h1 className='text-xl font-bold' >1000+ CLIENTS</h1>

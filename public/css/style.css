@@ -1,0 +1,587 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    background-color: rgb(26, 24, 24);
+    color: #fff;
+}
+
+
+                              /*****=== about.html ===*****/
+/* About Us Section */
+/*=== About Part ===*/
+
+.margin-section{
+    max-width: 80%;
+    margin: auto;
+    padding: 40px 0px 20px 0px;
+}
+
+.about-history{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #1c1b1b;
+    box-sizing: border-box;
+    padding-left: 15px;
+}
+
+.about-history h1{
+    flex-basis: 50%;
+    font-size: 33px;
+}
+
+.about-history .item-2, .about-history .item-3{
+    flex-basis: 25%;
+}
+
+.about-history .item-2 h3,.about-history .item-3 h3{
+    font-size: 20px;
+}
+
+.about-history .item-2 p,.about-history .item-3 p{
+    margin-bottom: 30px;
+    color: rgb(140, 166, 188);
+    margin: 15px 0px 15px 0px;
+}
+
+.about-details img{
+    width: 100%;
+    margin: 40px 0px 0px 0px;
+}
+
+.about-paragraph{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.about-paragraph p{
+    flex-basis: 50%;
+    padding: 20px;
+}
+
+/*=== Master Part ===*/
+
+.shop-head-master{
+    background-color: #1c1b1b;
+    margin-top: 40px;
+    padding-top: 10px;
+}
+.shop-head-master h1{
+    margin-left: 0.5%;
+}
+
+.shop-masters{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.shop-masters .master{
+    flex-basis: 33.33%;
+    background-color: #1c1b1b;
+}
+
+.shop-masters .master img{
+    height: 80%;
+    width: 90%;
+    padding: 30px 0px 10px 0px;
+}
+
+.shop-masters .master h3{
+    font-size: 22px;
+    padding: 12px 0px;
+}
+
+.master img, .master h3, .master p{
+    margin-left: 5%;
+}
+
+
+/* Our Works Section */
+
+.shop-head-works{
+    text-align: center;
+    padding: 50px 0px 40px 0px;
+}
+
+.our-works-images{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.our-works-images img{
+    flex-basis: 25%;
+    height: 200px;
+    object-fit: cover;
+}
+
+
+/* About Us Section */
+/*=== What We Provide Part ===*/
+
+.what-provide{
+    background-color: #1c1b1b;
+    align-items: center;
+    padding: 30px 0px 10px 0px;
+}
+
+.provide-service-head{
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-left: 10px;
+}
+
+.main-btn{
+    display: inline-block;
+    background-color: #b83220;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 10px;
+    margin-right: 2%;
+    font-size: 10px;
+    font-weight: bold;
+    border: none;
+    transition: all 0.5s ease;
+}
+  
+.main-btn:hover {
+    background-color: #3E8E41;
+    cursor: pointer;
+}
+
+/*** Service Details ***/
+.what-provide{
+    background-color: #1c1b1b;
+    align-items: center;
+    padding: 30px 0px 10px 0px;
+}
+.provide-services{
+    display: flex; 
+    flex-wrap: wrap;
+    margin-left: 2%;  
+}
+
+.provide-service{
+    background-color:rgb(6, 1, 1) ;
+    padding: 20px 5px 0px 20px;
+    margin-right: 2%;
+    margin-bottom: 2%;
+    flex-basis: 31.33%;
+    box-sizing: border-box;
+    transition: all 0.5s ease;
+}
+
+.provide-service:hover{
+    background-color: #1c1b1b;
+    cursor: pointer;
+}
+
+.icon-head{
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+  
+.icon-head img{
+    height: 45px;
+    margin-right: 10px;
+}
+  
+.icon-head h3{
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+}
+  
+.provide-service p{
+    font-size: 16px;
+    color: rgb(140, 166, 188);
+    line-height: 1.5;
+    padding: 10px 0px 10px 55px;
+}
+
+.service-price{
+    color: #b83220 !important;
+}
+
+
+/*=== What Client Say ===*/
+.clients-comment{
+    margin: 60px 0px 10px 0px;
+}
+
+#comment-head-icons{
+    display: flex;
+    justify-content: flex-end;
+}
+
+#comment-head-icons i{
+    margin: 0px 5px;
+}
+
+.clients-comment-paragraphs{
+    display: flex;
+    align-items: center;
+    margin-top: 2%;
+}
+
+.clients-comment-paragraph{
+    flex-basis: 44%;
+    border-radius: 10px;
+    margin-left: 3%;
+    background-color: rgb(6, 1, 1) ;
+    text-align: left;
+    padding: 20px;
+    cursor: pointer;
+    display: flex;
+}
+
+.clients-comment-paragraph img{
+    height: 40px;
+    margin-left: 5px;
+    margin-right: 30px;
+    border-radius: 50%;
+}
+
+.comment-paragraph-content{
+    flex-basis: 80%;
+}
+
+.main-paragraph{
+    color: rgb(140, 166, 188);
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.comment-paragraph-content h6{
+    color: #b83220 !important;
+    font-size: 18px;
+    padding-top: 2%;
+}
+
+
+/* Ready To Transform Section */
+.ready-to-transform{
+    margin: 50px auto;
+    width: 100%;
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),
+    url(../images/ready-to-transform.jpg);
+    background-position: center;
+    background-size: cover;
+    padding: 100px 0;
+    
+}
+
+.ready-to-transform h1, .ready-to-transform p, .ready-to-transform a{
+    color: #fff;
+    margin-bottom: 10px;
+    margin-left: 50%;
+    margin-right: 25%;
+}
+
+.ready-to-transform a{
+    margin-top: 2%;
+}
+
+.second-btn{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 12px 34px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+
+.second-btn:hover{
+    border: 1px solid #3E8E41;
+    background: #3E8E41;;
+    transition: 1s;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+
+                              /*****=== services.html ===*****/
+/* Services Section */
+
+.main-services-head{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 5%;
+}
+
+.main-services-head h1{
+    flex: 1;
+}
+
+.main-services-head p {
+    flex: 1;
+}
+
+.services-section{
+    margin-bottom: 20%;
+}
+.main-services-price p{
+    font-size: 15px;
+    line-height: 0%;
+    color: #fff !important;
+}
+
+.services-book-btn{
+    background-color: rgba(255, 17, 0, 0.469);
+    margin-top: 13%;
+    margin-left: 20%;
+    margin-bottom: 10%;
+}
+
+
+                              /*****=== gallery.html ===*****/
+/* Gallery Section */
+/*=== Head Part ===*/
+
+.gallery-section-head, .blog-section-head{
+    font-size: 40px;
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+
+.all-gallery-images{
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.gallery-images{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 8%;
+}
+
+.gallery-images img{
+    width: 50%;
+    height: auto;
+    object-fit: cover;
+    border: 10px solid #1c1b1b;
+}
+/*=== Button Part ===*/
+
+.secondary-color{
+    background: #1c1b1b;
+}
+
+.main-gallery-btns{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    
+}
+  
+.main-gallery-btn{
+    text-decoration: none;
+    padding:5px;
+    margin-right: 2%;
+    margin-bottom: 4%;
+    color: #fff;
+    font-size: 10px;
+    border: 1px solid #b83220;
+    cursor: pointer;
+}
+  
+.main-gallery-btn:hover {
+    background-color: #b83220;
+    transition: 1s;
+}
+  
+
+                              /*****=== blog.html ===*****/
+/* Gallery Section */
+/*=== All Blogs Head Part ===*/
+
+.recent-post-head{
+    font-size: 20px;
+    font-weight: lighter;
+    padding: 2%;
+}
+
+.all-blogs{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.single-blog{
+    flex-basis: 33.33%;
+    padding: 1.3%;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.single-blog:hover{
+    background-color: rgb(6, 1, 1) ;
+    transition: 0.8s;
+}
+
+.single-blog img{
+    align-items: auto;
+    width: 250px;
+    height: 250px;
+    display: block;
+}
+
+.single-blog h1{
+    font-size: 17px;
+    font-weight: bold;
+    margin-top: 10%;
+    margin-bottom: 6%;
+}
+
+.single-blog-mini-head{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.single-blog-mini-head h6{
+    flex-basis: 50%;
+    color: #b83220;
+    font-weight: bold;
+}
+
+.single-blog p{
+    margin-top: 5%;
+}
+
+                              /*****=== contact.html ===*****/
+/* Contact Section */
+
+/*=== Contact Details Part ===*/
+.contact-details h4{
+    font-size: 150%;
+    font-weight: 200;
+    margin-bottom: 2%;
+}
+
+.contact-details p{
+    font-size: 90%;
+    margin-bottom: 5%;
+}
+
+/*=== Form Part ===*/
+.contact-section{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.contact-details{
+    flex-basis: 40%;
+}
+
+.contact-form-group{
+    margin-bottom: 2%;
+}
+
+.contact-form-group label {
+    display: block;
+    margin-bottom: 2%;
+    margin-top: 5%;
+    
+}
+
+.contact-form-group input, .contact-form-group select{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    border-left: 3px solid rgb(128, 167, 109);
+    border-bottom: 3px solid rgb(128, 167, 109);
+}
+
+.contact-form-group textarea{
+    width: 200%;
+    height: 20%; /* Fixed height */
+    padding: 2%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    border-left: 3px solid rgb(128, 167, 109);
+    border-bottom: 3px solid rgb(128, 167, 109);
+    resize: none; /* Disable resizing */
+    margin-bottom: 4%;
+}
+
+.form-must-fill-box{
+    color: rgb(216, 21, 21);
+}
+
+.contact-location{
+    margin-top: 10%;
+    margin-bottom: 5%;
+}
+
+.contact-location iframe{
+    width: 100%;
+    height: 600px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                              

@@ -1,55 +1,52 @@
-import { useQuery } from 'react-query';
-import React, { useContext, useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
-// import { AuthContext } from '../../Context/AuthProvider';
+import React, { useEffect, useState } from 'react';
 
 const BookingList = () => {
-    // const { user } = useContext(AuthContext);
     const [bookingListOptions, setBookingListOptions] = useState([]);
     useEffect(() => {
-       fetch('http://localhost:5000/bookinglist')
-           .then(res => res.json())
-           .then(data => setBookingListOptions(data))
-   }, [])
-    // const url = `http://localhost:5000/bookinglist?email=${user?.email}`;
+        fetch('http://localhost:5000/bookinglist')
+            .then(res => res.json())
+            .then(data => setBookingListOptions(data))
+    }, [])
 
-    // const { data: bookings = [] } = useQuery({
-    //     queryKey: ['bookings', user?.email],
-    //     queryFn: async () => {
-    //         const res = await fetch(url, /**{
-    //             headers: {
-    //                 authorization: `bearer ${localStorage.getItem('accessToken')}`
-    //             }
-    //         }*/);
-    //         const data = await res.json();
-    //         return data;
-    //     }
-    // })
+    const b_table = {
 
+        "background-color": "#2C2C2C !important",
+        "text-align": "center",
+        "color": "#fff",
+        "border": "1px solid",
+
+    };
+    const b_tr = {
+        "border": "1px solid",
+        "padding": "10px 0",
+    };
+    const SizeNav = {
+        "color": "white",
+        "font-family": "'Roboto Condensed', sans-serif"
+    };
     return (
-        <div >
-            {/* <h3 className="text-3xl mb-5">My Appointments</h3> */}
+        <div className='c_padding'>
+            <h3 style={SizeNav} className="text-3xl mb-5">Booking List</h3>
             <div className="overflow-x-auto ">
-                <table className="table w-full   ">
-                    <thead >
-                        <tr>
+                <table className="b_table w-full   " style={b_table}>
+                    <thead style={{ "background-color": "red" }} >
+                        <tr style={b_tr} >
                             <th>No.</th>
                             <th>Name</th>
-                            <th>Treatment</th>
+                            <th>Service</th>
                             <th>Date</th>
                             <th>Time</th>
                         </tr>
                     </thead>
                     <tbody>
                         {
-                            // bookingListOptions &&
-                            bookingListOptions.map((booking, i) => <tr key={booking._id}>
-                                <th>{i + 1}</th>
+                            bookingListOptions.map((booking, i) => <tr style={b_tr} key={booking._id}>
+                                <td>{i + 1}</td>
                                 <td>{booking.clientName}</td>
                                 <td>{booking.service}</td>
                                 <td>{booking.appointmentDate}</td>
                                 <td>{booking.slot}</td>
-                              
+
                             </tr>)
                         }
                     </tbody>

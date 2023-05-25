@@ -5,7 +5,6 @@ import toast from 'react-hot-toast';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Context/AuthProvider';
 import SocialLogin from '../Login/SocialLogin/SocialLogin';
-// import { AuthContext } from '../../contexts/AuthProvider';
 
 const SignUp = () => {
 
@@ -74,7 +73,6 @@ const SignUp = () => {
                 </form>
                 <p className='text-white'>Already have an account <Link className='text-primary' to="/login">Please Login</Link></p>
                 <div className="divider">OR</div>
-                {/* <button className='btn btn-outline  text-white w-full'>CONTINUE WITH GOOGLE</button> */}
                 <SocialLogin></SocialLogin>
 
             </div>

@@ -1,80 +1,12 @@
-// import { format } from 'date-fns';
-// import React from 'react';
-
-// const BookingModal = ({ service, setService, selectedDate }) => {
-//     // treatment is just another name of appointmentOptions with name, slots, _id
-//     const { name, slots } = service;
-//     const date = format(selectedDate, 'PP');
-
-//     const handleBooking = event => {
-//         event.preventDefault();
-//         const form = event.target;
-//         const slot = form.slot.value;
-//         const name = form.name.value;
-//         const email = form.email.value;
-//         const phone = form.phone.value;
-//         // [3, 4, 5].map((value, i) => console.log(value))
-//         const booking = {
-//             appointmentDate: date,
-//             service: name,
-//             patient: name,
-//             slot,
-//             email,
-//             phone,
-//         }
-
-//         // TODO: send data to the server
-//         // and once data is saved then close the modal 
-//         // and display success toast
-//         console.log(booking);
-//         setService(null);
-//     }
-
-//     return (
-//         <>
-//             <input type="checkbox" id="booking-modal" className="modal-toggle" />
-//             <div className="modal  bg-neutral shadow-xl">
-//                 <div className="modal-box relative">
-//                     <label htmlFor="booking-modal" className="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
-//                     <h3 className="text-lg font-bold">{name}</h3>
-//                     <form onSubmit={handleBooking} className='grid grid-cols-1 gap-3 mt-10'>
-//                         <input type="text" disabled value={date} className="input w-full input-bordered " />
-//                         <select name="slot" className="select select-bordered w-full">
-//                             {
-//                                 slots.map((slot, i) => <option
-//                                     value={slot}
-//                                     key={i}
-//                                 >{slot}</option>)
-//                             }
-//                         </select>
-//                         <input name="name" type="text" placeholder="Your Name" className="input w-full input-bordered" />
-//                         <input name="email" type="email" placeholder="Email Address" className="input w-full input-bordered" />
-//                         <input name="phone" type="text" placeholder="Phone Number" className="input w-full input-bordered" />
-//                         <br />
-//                         <input className='btn btn-accent w-full' type="submit" value="Submit" />
-//                     </form>
-//                 </div>
-//             </div>
-//         </>
-//     );
-// };
-
-// export default BookingModal;
-
-
-
-
-
 import { format } from 'date-fns';
 import React from 'react';
 import { toast } from 'react-hot-toast';
-const BookingModal = ({ service, setService, selectedDate,refetch }) => {
-    // treatment is just another name of appointmentOptions with name, slots, _id
+const BookingModal = ({ service, setService, selectedDate, refetch }) => {
     const { name, slots } = service;
     const date = format(selectedDate, 'PP');
-    
 
-    
+
+
     const handleBooking = event => {
         event.preventDefault();
         const form = event.target;
@@ -84,11 +16,10 @@ const BookingModal = ({ service, setService, selectedDate,refetch }) => {
         const email = form.email.value;
         const phone = form.phone.value;
         const address = form.address.value;
-        // [3, 4, 5].map((value, i) => console.log(value))
         const booking = {
             appointmentDate: date,
             service: name,
-            preferredlocation:preferredlocation,
+            preferredlocation: preferredlocation,
             clientName: CLientName,
             slot,
             email,
@@ -98,9 +29,6 @@ const BookingModal = ({ service, setService, selectedDate,refetch }) => {
         //         console.log(booking);
         // setService(null);
 
-        // TODO: send data to the server
-        // and once data is saved then close the modal 
-        // and display success toast
 
         fetch('http://localhost:5000/bookings', {
             method: 'POST',
@@ -112,44 +40,30 @@ const BookingModal = ({ service, setService, selectedDate,refetch }) => {
             .then(res => res.json())
             .then(data => {
                 console.log(data);
-        //         console.log(booking);
-        // setService(null);
-        //             toast.success('Booking confirmed');
                 if (data.acknowledged) {
                     console.log(booking);
-        setService(null);
+                    setService(null);
                     toast.success('Booking confirmed');
                     refetch()
                 }
-                else{
+                else {
                     toast.error(data.message);
                 }
             })
 
 
-
-
-        
     }
 
+    return (
 
- 
-
-
-
-
-
-
-return (
-
- <>
+        <>
             <input type="checkbox" id="booking-modal" className="modal-toggle" />
             <div className="modal  ">
                 <div className="modal-box bg-neutral shadow-xl relative">
                     <label htmlFor="booking-modal" className="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
                     <h3 className="text-lg font-bold">{name}</h3>
-                    <form onSubmit={handleBooking}  className='grid grid-cols-1 gap-3 mt-10'>
-                        <input type="text"  value={date} className="bg-accent input w-full  " required/>
+                    <form onSubmit={handleBooking} className='grid grid-cols-1 gap-3 mt-10'>
+                        <input type="text" value={date} className="bg-accent input w-full  " required />
                         <select name="slot" className="bg-accent select select-bordered w-full" required>
                             {
                                 slots.map((slot, i) => <option
@@ -159,16 +73,16 @@ return (
                             }
                         </select>
                         <select name="preferredlocation" /*value={preferredlocation}*/ className="bg-accent select select-bordered w-full" required>
-                            <option 
-           >Offline Store</option>
+                            <option
+                            >Offline Store</option>
                             {/* <option disabled selected>preferredlocation</option> */}
-                            <option  
-         >Home Service</option>
+                            <option
+                            >Home Service</option>
                         </select>
                         <input name="CLientName" type="text" placeholder="Your Name" className=" bg-accent input w-full input-bordered" required />
-                        <input name="email" type="email" placeholder="Email Address" className="bg-accent input w-full input-bordered" required/>
+                        <input name="email" type="email" placeholder="Email Address" className="bg-accent input w-full input-bordered" required />
                         <input name="address" type="text" placeholder="Address(If you want to take home service then fill up must be done)" className="bg-accent input w-full input-bordered" />
-                        <input name="phone" type="text" placeholder="Phone Number" className="bg-accent input w-full input-bordered" required/>
+                        <input name="phone" type="text" placeholder="Phone Number" className="bg-accent input w-full input-bordered" required />
                         <br />
                         <input className='btn btn-primary w-full' type="submit" value="Confirm" />
                     </form>
