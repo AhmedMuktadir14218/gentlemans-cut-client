@@ -2,34 +2,36 @@
 import React, { useContext, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import toast from 'react-hot-toast';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Context/AuthProvider';
 import SocialLogin from '../Login/SocialLogin/SocialLogin';
+// import useToken from '../../Hooks/useToken';
 
 const SignUp = () => {
-
     const { register, handleSubmit, formState: { errors } } = useForm();
     const { createUser, updateUser } = useContext(AuthContext);
+    // const [createdUserEmail, setCreatedUserEmail] = useState('')
+    // const [token] = useToken(createdUserEmail);
     const [signUpError, setSignUPError] = useState('');
-    const location = useLocation();
     const navigate = useNavigate();
-    const from = location.state?.from?.pathname || '/'; 
-
+    // if(token){
+    //     navigate('/');
+    // }
 
     const handleSignUp = (data) => {
-        console.log(data);
         setSignUPError('');
         createUser(data.email, data.password)
             .then(result => {
                 const user = result.user;
                 console.log(user);
-                toast('User Created Successfully.');
-                navigate(from, {replace: true});
+                toast('User Created Successfully.')
                 const userInfo = {
                     displayName: data.name
                 }
                 updateUser(userInfo)
-                    .then(() => { })
+                    .then(() => {
+                        saveUser(data.name, data.email);
+                    })
                     .catch(err => console.log(err));
             })
             .catch(error => {
@@ -38,7 +40,34 @@ const SignUp = () => {
             });
     }
 
+    const saveUser = (name, email) =>{
+        const user ={name, email};
+        fetch('http://localhost:5000/users', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(user)
+        })
+        .then(res => res.json())
+        .then(data =>{
+            console.log(data);
+            navigate('/');
+            getUserToken(email);
+            // setCreatedUserEmail(email);
+        })
+    }
 
+    const getUserToken = email => {
+        fetch (`http://localhost:5000/jwt?email=${email}`)
+        .then (res => res.json())
+        .then (data => {
+            if(data.accessToken){
+                localStorage.setItem('accessToken',data.accessToken);
+                navigate('/');
+            }
+        })
+    }
 
     return (
         <div className='h-[720px] flex justify-center items-center'>
@@ -56,7 +85,7 @@ const SignUp = () => {
                         <label className="label"> <span className="text-white label-text">Email</span></label>
                         <input type="email" {...register("email", {
                             required: true
-                        })} className="input input-bordered w-full max-w-xs" />
+                        })} className="input input-bordered w-full max-w-xs text-black" />
                         {errors.email && <p className='text-red-500'>{errors.email.message}</p>}
                     </div>
                     <div className="form-control w-full max-w-xs">
@@ -65,7 +94,7 @@ const SignUp = () => {
                             required: "Password is required",
                             minLength: { value: 6, message: "Password must be 6 characters long" },
                             pattern: { value: /(?=.*[A-Z])(?=.*[!@#$&*])(?=.*[0-9])/, message: 'Password must have uppercase, number and special characters' }
-                        })} className="input input-bordered w-full max-w-xs" />
+                        })} className="text-black input input-bordered w-full max-w-xs" />
                         {errors.password && <p className='text-red-500'>{errors.password.message}</p>}
                     </div>
                     <input className='btn btn-primary w-full mt-4' value="Sign Up" type="submit" />

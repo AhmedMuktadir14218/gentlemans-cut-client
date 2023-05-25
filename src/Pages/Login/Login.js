@@ -5,14 +5,48 @@ import { AuthContext } from '../../Context/AuthProvider';
 // import { AuthContext } from '../../contexts/AuthProvider';
 import SocialLogin from '../Login/SocialLogin/SocialLogin';
 
+import useToken from '../../Hooks/useToken';
+
+
 const Login = () => {
+
+    // const { register, formState: { errors }, handleSubmit } = useForm();
+    // const { signIn } = useContext(AuthContext);
+    // const [loginError, setLoginError] = useState('');
+    // const location = useLocation();
+    // const navigate = useNavigate();
+
+    // const from = location.state?.from?.pathname || '/';
+
+    // const handleLogin = data => {
+    //     console.log(data);
+    //     setLoginError('');
+    //     signIn(data.email, data.password)
+    //         .then(result => {
+    //             const user = result.user;
+    //             console.log(user);
+    //             navigate(from, {replace: true});
+    //         })
+    //         .catch(error => {
+    //             console.log(error.message)
+    //             setLoginError(error.message);
+    //         });
+    // }
+
+
     const { register, formState: { errors }, handleSubmit } = useForm();
     const { signIn } = useContext(AuthContext);
     const [loginError, setLoginError] = useState('');
+    const [loginUserEmail, setLoginUserEmail] = useState('');
+    const [token] = useToken(loginUserEmail);
     const location = useLocation();
     const navigate = useNavigate();
 
     const from = location.state?.from?.pathname || '/';
+
+    if (token) {
+        navigate(from, { replace: true });
+    }
 
     const handleLogin = data => {
         console.log(data);
@@ -21,7 +55,7 @@ const Login = () => {
             .then(result => {
                 const user = result.user;
                 console.log(user);
-                navigate(from, {replace: true});
+                setLoginUserEmail(data.email);
             })
             .catch(error => {
                 console.log(error.message)
@@ -40,7 +74,7 @@ const Login = () => {
                             {...register("email", {
                                 required: "Email Address is required"
                             })}
-                            className="input input-bordered w-full max-w-xs" />
+                            className="text-black input input-bordered w-full max-w-xs" />
                         {errors.email && <p className='text-red-600'>{errors.email?.message}</p>}
                     </div>
                     <div className="form-control w-full max-w-xs">
@@ -50,7 +84,7 @@ const Login = () => {
                                 required: "Password is required",
                                 minLength: { value: 6, message: 'Password must be 6 characters or longer' }
                             })}
-                            className="input input-bordered w-full max-w-xs" />
+                            className="text-black input input-bordered w-full max-w-xs" />
                         <label className="label"> <span className="text-white label-text">Forget Password?</span></label>
                         {errors.password && <p className='text-red-600'>{errors.password?.message}</p>}
                     </div>

@@ -1,9 +1,12 @@
 import { format } from 'date-fns';
-import React from 'react';
+import React, { useContext } from 'react';
 import { toast } from 'react-hot-toast';
+import { AuthContext } from '../../../Context/AuthProvider';
 const BookingModal = ({ service, setService, selectedDate, refetch }) => {
     const { name, slots } = service;
     const date = format(selectedDate, 'PP');
+    
+    const { user } = useContext(AuthContext);
 
 
 
@@ -80,7 +83,7 @@ const BookingModal = ({ service, setService, selectedDate, refetch }) => {
                             >Home Service</option>
                         </select>
                         <input name="CLientName" type="text" placeholder="Your Name" className=" bg-accent input w-full input-bordered" required />
-                        <input name="email" type="email" placeholder="Email Address" className="bg-accent input w-full input-bordered" required />
+                        <input name="email" type="email" defaultValue={user?.email} disabled placeholder="Email Address" className="  font-bold bg-primary input w-full  inputBG" />
                         <input name="address" type="text" placeholder="Address(If you want to take home service then fill up must be done)" className="bg-accent input w-full input-bordered" />
                         <input name="phone" type="text" placeholder="Phone Number" className="bg-accent input w-full input-bordered" required />
                         <br />

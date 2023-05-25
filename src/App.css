@@ -23,8 +23,14 @@
         padding: 70px 135px 50px;
     }
 
-    .h_padding, .p_header {
+    .h_padding   {
         padding: 20px 135px;
+        display: flex;
+        margin: 0 auto;
+    } 
+    
+    .p_header {
+        padding: 12px 140px;
         display: flex;
         margin: 0 auto;
     }
@@ -67,7 +73,7 @@ figure img {
         padding: 20px 10px;
     }
     .p_header {
-        padding: 20px 50px;
+        padding: 12px 50px;
     }
 
     .h_padding img {
@@ -87,7 +93,7 @@ figure img {
         padding: 20px 50px;
     }
     .p_header {
-        padding: 20px 50px;
+        padding: 12px 50px;
     }
 
 }

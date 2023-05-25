@@ -5,13 +5,13 @@ const Gallery = () => {
     return (
         <div>
 
-            <section class="margin-section">
+            <section className="margin-section">
 
-                <h1 class="gallery-section-head">GALLERY WITH OUR CUTS</h1>
+                <h1 className="gallery-section-head">GALLERY WITH OUR CUTS</h1>
 
-                <div class="all-gallery-images">
+                <div className="all-gallery-images">
 
-                    <div class="gallery-images">
+                    <div className="gallery-images">
                         <img src="./images/face-wash-1.jpg" alt="face-wash-1" />
                         <img src="./images/hair-cut-1.jpg" alt="hair-cut-1" />
                         <img src="./images/hair-dyeing-1.jpg" alt="hair-dyeing-1" />
