@@ -1,7 +1,7 @@
 import { useQuery } from 'react-query';
 import React, { useState } from 'react';
 import toast from 'react-hot-toast';
-import ConfirmationModal from '../../Shared/ConfirmationModal/ConfirmationModal';
+import ConfirmationModal from '../../Pages/Shared/ConfirmationModal';
 import Loading from '../../Pages/Shared/Loading';
 
 const ManageBerbars = () => {
