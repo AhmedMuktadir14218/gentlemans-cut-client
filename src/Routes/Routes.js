@@ -17,6 +17,7 @@ import AdminRoute from "../Routes/AdminRoute/AdminRoute";
 import BookingList from "../Pages/Dashboard/BookingList";
 import AddBerbar from "../Pages/Dashboard/AddBerbar";
 import ManageBerbars from "../Pages/Dashboard/ManageBerbars";
+import AddNewService from "../Pages/Dashboard/AddNewService";
 
  const router = createBrowserRouter([
     {
@@ -93,7 +94,11 @@ import ManageBerbars from "../Pages/Dashboard/ManageBerbars";
             {
                 path: '/dashboard/managedoctors',
                 element: <AdminRoute><ManageBerbars></ManageBerbars></AdminRoute>
-            }
+            },
+            {
+                path: '/dashboard/addnewservice',
+                element: <AdminRoute><AddNewService></AddNewService></AdminRoute>
+            },
         ]
     }
 

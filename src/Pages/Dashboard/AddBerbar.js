@@ -12,7 +12,7 @@ const AddBerbar = () => {
 
     const navigate = useNavigate();
     
-    const { data: specialties, isLoading } = useQuery({
+    const { data:  isLoading } = useQuery({
         queryKey: ['specialty'],
         queryFn: async () => {
             const res = await fetch('http://localhost:5000/appointmentSpecialty');
@@ -37,7 +37,7 @@ const AddBerbar = () => {
                 const berbar = {
                     name: data.name, 
                     email: data.email,
-                    specialty: data.specialty,
+                    // specialty: data.specialty,
                     image: imgData.data.url
                 }
 
@@ -54,7 +54,7 @@ const AddBerbar = () => {
                 .then(result =>{
                     console.log(result);
                     toast.success(`${data.name} is added successfully`);
-                    navigate('/dashboard/manageberbars')
+                    navigate('/')
                 })
             }
         })
@@ -65,28 +65,28 @@ const AddBerbar = () => {
     }
 
     return (
-        <div className='w-96 p-7'>
-            <h2 className="text-4xl">Add A berbar</h2>
+        <div className='doctormid w-96 p-7'>
+            <h2 className="text-4xl">Add A Berbar</h2>
             <form onSubmit={handleSubmit(handleAddBerbar)}>
                 <div className="form-control w-full max-w-xs">
-                    <label className="label"> <span className="label-text">Name</span></label>
+                    <label className="label"> <span className="label-text text-white">Name</span></label>
                     <input type="text" {...register("name", {
                         required: "Name is Required"
-                    })} className="input input-bordered w-full max-w-xs" />
+                    })} className="input text-red-500 input-bordered w-full max-w-xs" />
                     {errors.name && <p className='text-red-500'>{errors.name.message}</p>}
                 </div>
                 <div className="form-control w-full max-w-xs">
-                    <label className="label"> <span className="label-text">Email</span></label>
+                    <label className="label"> <span className="label-text text-white">Email</span></label>
                     <input type="email" {...register("email", {
                         required: true
-                    })} className="input input-bordered w-full max-w-xs" />
+                    })} className="input text-red-500 input-bordered w-full max-w-xs" />
                     {errors.email && <p className='text-red-500'>{errors.email.message}</p>}
                 </div>
-                <div className="form-control w-full max-w-xs">
-                    <label className="label"> <span className="label-text">Specialty</span></label>
+                {/* <div className="form-control w-full max-w-xs">
+                    <label className="label"> <span className=" text-white label-text">Specialty</span></label>
                     <select 
                     {...register('specialty')}
-                    className="select input-bordered w-full max-w-xs">
+                    className=" bg bg-accent select input-bordered w-full max-w-xs">
                         {
                             specialties.map(specialty => <option
                                 key={specialty._id}
@@ -96,9 +96,9 @@ const AddBerbar = () => {
                         
                         
                     </select>
-                </div>
+                </div> */}
                 <div className="form-control w-full max-w-xs">
-                    <label className="label"> <span className="label-text">Photo</span></label>
+                    <label className="label"> <span className=" text-white label-text">Photo</span></label>
                     <input type="file" {...register("image", {
                         required: "Photo is Required"
                     })} className="input input-bordered w-full max-w-xs" />

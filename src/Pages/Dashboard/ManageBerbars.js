@@ -34,9 +34,9 @@ const ManageBerbars = () => {
     const handleDeleteDoctor = berbar => {
         fetch(`http://localhost:5000/berbars/${berbar._id}`, {
             method: 'DELETE', 
-            headers: {
-                authorization: `bearer ${localStorage.getItem('accessToken')}`
-            }
+            // headers: {
+            //     authorization: `bearer ${localStorage.getItem('accessToken')}`
+            // }
         })
         .then(res => res.json())
         .then(data => {
@@ -51,35 +51,55 @@ const ManageBerbars = () => {
         return <Loading></Loading>
     }
 
+    
+    const b_table = {
+
+        "background-color": "#2C2C2C !important",
+        "text-align": "center",
+        "color": "#ffff",
+        "border": "1px solid",
+
+    };
+    const b_tr = {
+        "border": "1px solid",
+        "padding": "10px 0",
+    };
+    const SizeNav = {
+        "color": "white",
+        "font-family": "'Roboto Condensed', sans-serif"
+    };
+
+
+
     return (
-        <div>
-            <h2 className="text-3xl">Manage berbars: {berbars?.length}</h2>
-            <div className="overflow-x-auto">
-                <table className="table w-full">
-                    <thead>
-                        <tr>
-                            <th></th>
+        <div style={SizeNav} className='c_padding '>
+            <h2 className="text-3xl">Total Berbars: {berbars?.length}</h2>
+            <div  className="overflow-x-auto">
+                <table style={b_table} className="b_table  w-full">
+                    <thead style={{ "background-color": "red" }} >
+                        <tr style={b_tr} >
+                            <th>No.</th>                            
                             <th>Avatar</th>
                             <th>Name</th>
                             <th>Email</th>
-                            <th>Specialty</th>
+                            {/* <th>Specialty</th> */}
                             <th>Action</th>
                         </tr>
                     </thead>
                     <tbody>
                         {
-                            berbars.map((doctor, i) => <tr key={doctor._id}>
+                            berbars.map((berbar, i) => <tr key={berbar._id}>
                                 <th>{i + 1}</th>
                                 <td><div className="avatar">
                                     <div className="w-24 rounded-full">
-                                        <img src={doctor.image} alt="" />
+                                        <img src={berbar.image} alt="" />
                                     </div>
                                 </div></td>
-                                <td>{doctor.name}</td>
-                                <td>{doctor.email}</td>
-                                <td>{doctor.specialty}</td>
+                                <td>{berbar.name}</td>
+                                <td>{berbar.email}</td>
+                                {/* <td>{berbar.specialty}</td> */}
                                 <td>
-                                    <label onClick={() => setDeletingBerbar(doctor)} htmlFor="confirmation-modal" className="btn btn-sm btn-error">Delete</label>
+                                    <label onClick={() => setDeletingBerbar(berbar)} htmlFor="confirmation-modal" className="btn btn-primary">Delete</label>
                                 </td>
                             </tr>)
                         }
