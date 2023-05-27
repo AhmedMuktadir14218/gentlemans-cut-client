@@ -88,11 +88,11 @@ import AddNewService from "../Pages/Dashboard/AddNewService";
                 // element:  <AllUsers></AllUsers> 
             },
             {
-                path: '/dashboard/adddoctor',
+                path: '/dashboard/addberbar',
                 element: <AdminRoute><AddBerbar></AddBerbar></AdminRoute>
             },
             {
-                path: '/dashboard/managedoctors',
+                path: '/dashboard/manageberbars',
                 element: <AdminRoute><ManageBerbars></ManageBerbars></AdminRoute>
             },
             {
