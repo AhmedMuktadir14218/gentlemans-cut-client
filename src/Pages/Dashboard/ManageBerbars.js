@@ -34,9 +34,9 @@ const ManageBerbars = () => {
     const handleDeleteDoctor = berbar => {
         fetch(`http://localhost:5000/berbars/${berbar._id}`, {
             method: 'DELETE', 
-            // headers: {
-            //     authorization: `bearer ${localStorage.getItem('accessToken')}`
-            // }
+            headers: {
+                authorization: `bearer ${localStorage.getItem('accessToken')}`
+            }
         })
         .then(res => res.json())
         .then(data => {
@@ -73,7 +73,7 @@ const ManageBerbars = () => {
 
     return (
         <div style={SizeNav} className='c_padding '>
-            <h2 className="text-3xl">Total Berbars: {berbars?.length}</h2>
+            <h2 className="text-3xl">Total Barber: {berbars?.length}</h2>
             <div  className="overflow-x-auto">
                 <table style={b_table} className="b_table  w-full">
                     <thead style={{ "background-color": "red" }} >

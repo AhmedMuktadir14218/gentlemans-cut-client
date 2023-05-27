@@ -12,14 +12,14 @@ const AddBerbar = () => {
 
     const navigate = useNavigate();
     
-    const { data:  isLoading } = useQuery({
-        queryKey: ['specialty'],
-        queryFn: async () => {
-            const res = await fetch('http://localhost:5000/appointmentSpecialty');
-            const data = await res.json();
-            return data;
-        }
-    })
+    // const { data:  isLoading } = useQuery({
+    //     queryKey: ['specialty'],
+    //     queryFn: async () => {
+    //         const res = await fetch('http://localhost:5000/appointmentSpecialty');
+    //         const data = await res.json();
+    //         return data;
+    //     }
+    // })
 
     const handleAddBerbar = data => {
         const image = data.image[0];
@@ -60,13 +60,13 @@ const AddBerbar = () => {
         })
     }
 
-    if(isLoading){
-        return <Loading></Loading>
-    }
+    // if(isLoading){
+    //     return <Loading></Loading>
+    // }
 
     return (
         <div className='doctormid w-96 p-7'>
-            <h2 className="text-4xl">Add A Berbar</h2>
+            <h2 className="text-4xl">Add A Barber</h2>
             <form onSubmit={handleSubmit(handleAddBerbar)}>
                 <div className="form-control w-full max-w-xs">
                     <label className="label"> <span className="label-text text-white">Name</span></label>
