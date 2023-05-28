@@ -16,7 +16,7 @@ const ManageBerbars = () => {
         queryKey: ['berbars'],
         queryFn: async () => {
             try {
-                const res = await fetch('http://localhost:5000/berbars', {
+                const res = await fetch('https://gentlemans-cut-server.vercel.app/berbars', {
                     headers: {
                         authorization: `bearer ${localStorage.getItem('accessToken')}`
                     }
@@ -32,7 +32,7 @@ const ManageBerbars = () => {
 
     
     const handleDeleteDoctor = berbar => {
-        fetch(`http://localhost:5000/berbars/${berbar._id}`, {
+        fetch(`https://gentlemans-cut-server.vercel.app/berbars/${berbar._id}`, {
             method: 'DELETE', 
             headers: {
                 authorization: `bearer ${localStorage.getItem('accessToken')}`

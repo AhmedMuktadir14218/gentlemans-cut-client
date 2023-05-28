@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 const BookingList = () => {
     const [bookingListOptions, setBookingListOptions] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/bookinglist')
+        fetch('https://gentlemans-cut-server.vercel.app/bookinglist')
             .then(res => res.json())
             .then(data => setBookingListOptions(data))
     }, [])

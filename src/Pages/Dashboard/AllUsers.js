@@ -4,14 +4,14 @@ import toast from 'react-hot-toast';
 
 const AllUsers = () => {
   const { data: users = [], refetch } = useQuery('users', async () => {
-    const res = await fetch('http://localhost:5000/users');
+    const res = await fetch('https://gentlemans-cut-server.vercel.app/users');
     const data = await res.json();
     return data;
   });
 
   const makeUserAdmin = useMutation(id =>
-    // fetch(`http://localhost:5000/users/admin/${id}`, {
-    fetch('http://localhost:5000/users', {
+    fetch(`https://gentlemans-cut-server.vercel.app/users/admin/${id}`, {
+    // fetch('https://gentlemans-cut-server.vercel.app/users', {
       method: 'PUT',
       headers: {
         authorization: `bearer ${localStorage.getItem('accessToken')}`
@@ -45,14 +45,14 @@ const AllUsers = () => {
     // const {data: users = [], refetch} = useQuery({
     //     queryKey: ['users'],
     //     queryFn: async() =>{
-    //         const res = await fetch('http://localhost:5000/users');
+    //         const res = await fetch('https://gentlemans-cut-server.vercel.app/users');
     //         const data = await res.json();
     //         return data;
     //     }
     // });
 
     // const handleMakeAdmin = id => {
-    //     fetch(`http://localhost:5000/users/admin/${id}`, {
+    //     fetch(`https://gentlemans-cut-server.vercel.app/users/admin/${id}`, {
     //         method: 'PUT', 
     //         headers: {
     //             authorization: `bearer ${localStorage.getItem('accessToken')}`

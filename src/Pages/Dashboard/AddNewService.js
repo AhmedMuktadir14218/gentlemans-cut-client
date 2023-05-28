@@ -25,7 +25,7 @@ const AddNewService = () => {
         .then(res => res.json())
         .then(imgData => {
             if(imgData.success){
-                console.log(imgData.data.url);
+                // console.log(imgData.data.url);
                 const service = {
                     name: data.name, 
                     img: imgData.data.url,
@@ -51,7 +51,7 @@ const AddNewService = () => {
                 }
 
                 // save service information to the database
-                fetch('http://localhost:5000/appointmentOptions', {
+                fetch('https://gentlemans-cut-server.vercel.app/appointmentOptions', {
                     method: 'POST',
                     headers: {
                         'content-type': 'application/json', 
@@ -61,7 +61,7 @@ const AddNewService = () => {
                 })
                 .then(res => res.json())
                 .then(result =>{
-                    console.log(result);
+                    // console.log(result);
                     toast.success(`${data.name} is added successfully`);
                     navigate('/service')
                 })

@@ -9,7 +9,7 @@ const AvailableAppointment = ({ selectedDate, setSelectedDate }) => {
     const { data: appointmentOptions = [], refetch } = useQuery({
         queryKey: ['appointmentOption', date],
         queryFn: async () => {
-            const res = await fetch(`http://localhost:5000/appointmentOptions?date=${date}`);
+            const res = await fetch(`https://gentlemans-cut-server.vercel.app/appointmentOptions?date=${date}`);
             const data = await res.json();
             return data
         }
@@ -17,7 +17,7 @@ const AvailableAppointment = ({ selectedDate, setSelectedDate }) => {
     })
 
     // useEffect(() => {
-    //     fetch('http://localhost:5000/appointmentOptions')
+    //     fetch('https://gentlemans-cut-server.vercel.app/appointmentOptions')
     //         .then(res => res.json())
     //         .then(data => setAppointmentOptions(data))
     // }, [])

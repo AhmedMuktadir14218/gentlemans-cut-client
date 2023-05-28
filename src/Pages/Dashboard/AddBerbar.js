@@ -1,9 +1,9 @@
-import { useQuery } from 'react-query';
+// import { useQuery } from 'react-query';
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import toast from 'react-hot-toast';
 import { useNavigate } from 'react-router-dom';
-import Loading from '../../Pages/Shared/Loading';
+// import Loading from '../../Pages/Shared/Loading';
 
 const AddBerbar = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
@@ -15,7 +15,7 @@ const AddBerbar = () => {
     // const { data:  isLoading } = useQuery({
     //     queryKey: ['specialty'],
     //     queryFn: async () => {
-    //         const res = await fetch('http://localhost:5000/appointmentSpecialty');
+    //         const res = await fetch('https://gentlemans-cut-server.vercel.app/appointmentSpecialty');
     //         const data = await res.json();
     //         return data;
     //     }
@@ -33,7 +33,7 @@ const AddBerbar = () => {
         .then(res => res.json())
         .then(imgData => {
             if(imgData.success){
-                console.log(imgData.data.url);
+                // console.log(imgData.data.url);
                 const berbar = {
                     name: data.name, 
                     email: data.email,
@@ -42,7 +42,7 @@ const AddBerbar = () => {
                 }
 
                 // save berbar information to the database
-                fetch('http://localhost:5000/berbars', {
+                fetch('https://gentlemans-cut-server.vercel.app/berbars', {
                     method: 'POST',
                     headers: {
                         'content-type': 'application/json', 
@@ -52,7 +52,7 @@ const AddBerbar = () => {
                 })
                 .then(res => res.json())
                 .then(result =>{
-                    console.log(result);
+                    // console.log(result);
                     toast.success(`${data.name} is added successfully`);
                     navigate('/')
                 })

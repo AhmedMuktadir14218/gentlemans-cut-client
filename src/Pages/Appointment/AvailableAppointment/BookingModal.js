@@ -33,7 +33,7 @@ const BookingModal = ({ service, setService, selectedDate, refetch }) => {
         // setService(null);
 
 
-        fetch('http://localhost:5000/bookings', {
+        fetch('https://gentlemans-cut-server.vercel.app/bookings', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -42,9 +42,9 @@ const BookingModal = ({ service, setService, selectedDate, refetch }) => {
         })
             .then(res => res.json())
             .then(data => {
-                console.log(data);
+                // console.log(data);
                 if (data.acknowledged) {
-                    console.log(booking);
+                    // console.log(booking);
                     setService(null);
                     toast.success('Booking confirmed');
                     refetch()
