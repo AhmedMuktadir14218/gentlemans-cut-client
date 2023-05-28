@@ -78,7 +78,7 @@ const SignUp = () => {
                         <label className="label"> <span className="text-white label-text">Name</span></label>
                         <input type="text" {...register("name", {
                             required: "Name is Required"
-                        })} className="input input-bordered w-full max-w-xs" />
+                        })} className="input text-black input-bordered w-full max-w-xs" />
                         {errors.name && <p className='text-red-500'>{errors.name.message}</p>}
                     </div>
                     <div className="form-control w-full max-w-xs">
